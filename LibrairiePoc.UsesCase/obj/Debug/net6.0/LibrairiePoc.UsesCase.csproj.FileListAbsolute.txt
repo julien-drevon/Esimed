@@ -10,3 +10,15 @@ C:\Users\drevo\source\repos\LibrairePoc\LibrairiePoc.UsesCase\obj\Debug\net6.0\L
 C:\Users\drevo\source\repos\LibrairePoc\LibrairiePoc.UsesCase\obj\Debug\net6.0\refint\LibrairiePoc.UsesCase.dll
 C:\Users\drevo\source\repos\LibrairePoc\LibrairiePoc.UsesCase\obj\Debug\net6.0\LibrairiePoc.UsesCase.pdb
 C:\Users\drevo\source\repos\LibrairePoc\LibrairiePoc.UsesCase\obj\Debug\net6.0\ref\LibrairiePoc.UsesCase.dll
+C:\github\wormrock\Esimed\LibrairiePoc.UsesCase\obj\Debug\net6.0\LibrairiePoc.UsesCase.csproj.AssemblyReference.cache
+C:\github\wormrock\Esimed\LibrairiePoc.UsesCase\obj\Debug\net6.0\LibrairiePoc.UsesCase.GeneratedMSBuildEditorConfig.editorconfig
+C:\github\wormrock\Esimed\LibrairiePoc.UsesCase\obj\Debug\net6.0\LibrairiePoc.UsesCase.AssemblyInfoInputs.cache
+C:\github\wormrock\Esimed\LibrairiePoc.UsesCase\obj\Debug\net6.0\LibrairiePoc.UsesCase.AssemblyInfo.cs
+C:\github\wormrock\Esimed\LibrairiePoc.UsesCase\obj\Debug\net6.0\LibrairiePoc.UsesCase.csproj.CoreCompileInputs.cache
+C:\github\wormrock\Esimed\LibrairiePoc.UsesCase\obj\Debug\net6.0\LibrairiePoc.UsesCase.dll
+C:\github\wormrock\Esimed\LibrairiePoc.UsesCase\obj\Debug\net6.0\ref\LibrairiePoc.UsesCase.dll
+C:\github\wormrock\Esimed\LibrairiePoc.UsesCase\obj\Debug\net6.0\LibrairiePoc.UsesCase.pdb
+C:\github\wormrock\Esimed\LibrairiePoc.UsesCase\bin\Debug\net6.0\LibrairiePoc.UsesCase.deps.json
+C:\github\wormrock\Esimed\LibrairiePoc.UsesCase\bin\Debug\net6.0\LibrairiePoc.UsesCase.dll
+C:\github\wormrock\Esimed\LibrairiePoc.UsesCase\bin\Debug\net6.0\LibrairiePoc.UsesCase.pdb
+C:\github\wormrock\Esimed\LibrairiePoc.UsesCase\obj\Debug\net6.0\refint\LibrairiePoc.UsesCase.dll

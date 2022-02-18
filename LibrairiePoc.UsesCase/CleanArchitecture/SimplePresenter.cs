@@ -1,6 +1,6 @@
 ﻿namespace LibrairiePoc.UsesCase.CleanArchitecture
 {
-    public class SimplePresenter<Tin> : IInPresenter<Tin>, IOutPresenter<Tin>
+    public class SimplePresenter<Tin> : IPresenter<Tin, Tin>
     {
         private Tin _Data;
 

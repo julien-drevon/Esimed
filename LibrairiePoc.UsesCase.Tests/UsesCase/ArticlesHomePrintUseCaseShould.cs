@@ -10,7 +10,12 @@ namespace LibrairiePoc.UsesCase.Tests.UsesCase
 {
     public class ArticlesHomePrintUseCaseShould
     {
-        private SimplePresenter<PaginedData<Book>> _Presenter = new SimplePresenter<PaginedData<Book>>();
+        private IPresenter<PaginedData<Book>, PaginedData<Book>> _Presenter;
+
+        public ArticlesHomePrintUseCaseShould()
+        {
+            _Presenter = new SimplePresenter<PaginedData<Book>>();
+        }
 
         [Fact]
         public void GivenClient_WhenIGetBokks_ShouldReturn20ByDEfault()
@@ -19,7 +24,7 @@ namespace LibrairiePoc.UsesCase.Tests.UsesCase
             assert.Execute(new GetBooksRequest(), _Presenter);
             _Presenter.GetData().Should().BeEquivalentTo(new PaginedData<Book>()
             {
-                Data = new[] { new Book("10022544", "Clean code", "Robert C Matins", 42, "techn  ique") },
+                Data = new[] { new Book("10022544", "Clean code", "Robert C Matins", 42, "technique") },
                 Page = 1,
                 PageSize = 20,
             });

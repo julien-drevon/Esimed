@@ -1,0 +1,12 @@
+C:\github\wormrock\Esimed\LibrairiePoc.Infra\bin\Debug\net6.0\LibrairiePoc.Infra.deps.json
+C:\github\wormrock\Esimed\LibrairiePoc.Infra\bin\Debug\net6.0\LibrairiePoc.Infra.dll
+C:\github\wormrock\Esimed\LibrairiePoc.Infra\bin\Debug\net6.0\LibrairiePoc.Infra.pdb
+C:\github\wormrock\Esimed\LibrairiePoc.Infra\obj\Debug\net6.0\LibrairiePoc.Infra.csproj.AssemblyReference.cache
+C:\github\wormrock\Esimed\LibrairiePoc.Infra\obj\Debug\net6.0\LibrairiePoc.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\github\wormrock\Esimed\LibrairiePoc.Infra\obj\Debug\net6.0\LibrairiePoc.Infra.AssemblyInfoInputs.cache
+C:\github\wormrock\Esimed\LibrairiePoc.Infra\obj\Debug\net6.0\LibrairiePoc.Infra.AssemblyInfo.cs
+C:\github\wormrock\Esimed\LibrairiePoc.Infra\obj\Debug\net6.0\LibrairiePoc.Infra.csproj.CoreCompileInputs.cache
+C:\github\wormrock\Esimed\LibrairiePoc.Infra\obj\Debug\net6.0\LibrairiePoc.Infra.dll
+C:\github\wormrock\Esimed\LibrairiePoc.Infra\obj\Debug\net6.0\refint\LibrairiePoc.Infra.dll
+C:\github\wormrock\Esimed\LibrairiePoc.Infra\obj\Debug\net6.0\LibrairiePoc.Infra.pdb
+C:\github\wormrock\Esimed\LibrairiePoc.Infra\obj\Debug\net6.0\ref\LibrairiePoc.Infra.dll
