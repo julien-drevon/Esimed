@@ -1,0 +1,12 @@
+C:\Users\drevo\source\repos\LibrairePoc\LibrairiePoc.UsesCase\bin\Debug\net6.0\LibrairiePoc.UsesCase.deps.json
+C:\Users\drevo\source\repos\LibrairePoc\LibrairiePoc.UsesCase\bin\Debug\net6.0\LibrairiePoc.UsesCase.dll
+C:\Users\drevo\source\repos\LibrairePoc\LibrairiePoc.UsesCase\bin\Debug\net6.0\LibrairiePoc.UsesCase.pdb
+C:\Users\drevo\source\repos\LibrairePoc\LibrairiePoc.UsesCase\obj\Debug\net6.0\LibrairiePoc.UsesCase.csproj.AssemblyReference.cache
+C:\Users\drevo\source\repos\LibrairePoc\LibrairiePoc.UsesCase\obj\Debug\net6.0\LibrairiePoc.UsesCase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\drevo\source\repos\LibrairePoc\LibrairiePoc.UsesCase\obj\Debug\net6.0\LibrairiePoc.UsesCase.AssemblyInfoInputs.cache
+C:\Users\drevo\source\repos\LibrairePoc\LibrairiePoc.UsesCase\obj\Debug\net6.0\LibrairiePoc.UsesCase.AssemblyInfo.cs
+C:\Users\drevo\source\repos\LibrairePoc\LibrairiePoc.UsesCase\obj\Debug\net6.0\LibrairiePoc.UsesCase.csproj.CoreCompileInputs.cache
+C:\Users\drevo\source\repos\LibrairePoc\LibrairiePoc.UsesCase\obj\Debug\net6.0\LibrairiePoc.UsesCase.dll
+C:\Users\drevo\source\repos\LibrairePoc\LibrairiePoc.UsesCase\obj\Debug\net6.0\refint\LibrairiePoc.UsesCase.dll
+C:\Users\drevo\source\repos\LibrairePoc\LibrairiePoc.UsesCase\obj\Debug\net6.0\LibrairiePoc.UsesCase.pdb
+C:\Users\drevo\source\repos\LibrairePoc\LibrairiePoc.UsesCase\obj\Debug\net6.0\ref\LibrairiePoc.UsesCase.dll
