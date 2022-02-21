@@ -14,10 +14,11 @@ namespace LibrairiePoc.UsesCase.Tests
         [Fact]
         public void GettingBooks_Should_ClientGetBooksUseCase()
         {
-            var manager = new GettingBooksManager(new BookRepositoryFact());
+
             IPresenter<PaginedData<Book>, PaginedData<Book>> presenter = new SimplePresenter<PaginedData<Book>>();
+            var manager = new GettingBooksManager(new BookRepositoryFact(), presenter);
             GetBooksRequest request = new();
-            manager.ClientGetBooks(request, presenter);
+            manager.ClientGetBooks(request);
             presenter.GetData().Should().BeEquivalentTo(new PaginedData<Book>()
             {
                 Data = new[] { new Book("10022544", "Clean code", "Robert C Matins", 42, "technique") },

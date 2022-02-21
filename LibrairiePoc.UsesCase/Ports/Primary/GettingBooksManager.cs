@@ -14,16 +14,19 @@ namespace LibrairiePoc.UsesCase.Ports.Primary
 {
     public class GettingBooksManager
     {
-        public GettingBooksManager(IBookRepository bookRepo)
+        public GettingBooksManager(IBookRepository bookRepo, IInPresenter<PaginedData<Book>> bookPresenter)
         {
             BookRepository = bookRepo;
+            _BookPresenter = bookPresenter;
+
         }
+        private IInPresenter<PaginedData<Book>> _BookPresenter;
 
         private readonly IBookRepository BookRepository;
-        public void ClientGetBooks(GetBooksRequest getBooksRequest, IInPresenter<PaginedData<Book>> presenter)
+        public void ClientGetBooks(GetBooksRequest getBooksRequest)
         {
             var usecase = new ClientGetBooksUseCase(BookRepository);
-            usecase.Execute(getBooksRequest, presenter);
+            usecase.Execute(getBooksRequest, _BookPresenter);
         }
     }
 

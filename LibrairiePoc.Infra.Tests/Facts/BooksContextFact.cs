@@ -1,16 +1,15 @@
 ﻿namespace LibrairiePoc.Infra.Tests;
+
 using LibrairiePoc.Infra.Dtos;
 using Microsoft.EntityFrameworkCore;
 
 public class BooksContextFact : DbContext  //BooksContext
 {
-
     public BooksContextFact(DbContextOptions options)
         : base(options)
     {
         Database.EnsureCreated();
     }
-
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -49,7 +48,6 @@ public class BooksContextFact : DbContext  //BooksContext
                 CategoryId = 1,
                 Price = 25.80m,
                 Isbn = "CCIsbn"
-
             },
             new BookDto()
             {

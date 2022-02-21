@@ -2,7 +2,6 @@
 
 namespace LibrairiePoc.Infra
 {
-
     public class BooksContext : DbContext
     {
         protected override void OnModelCreating(ModelBuilder builder)
@@ -10,7 +9,6 @@ namespace LibrairiePoc.Infra
             CreateModelTools.CreateBookcontext(builder);
         }
     }
-
 
     public class CreateModelTools
     {

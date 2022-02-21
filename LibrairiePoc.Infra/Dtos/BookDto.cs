@@ -12,11 +12,10 @@
 
         public CategoryDto Category { get; set; }
 
-        public int AuthorId { get;  set; }
+        public int AuthorId { get; set; }
 
         public int CategoryId { get; set; }
 
         public string Isbn { get; set; }
-
     }
 }
