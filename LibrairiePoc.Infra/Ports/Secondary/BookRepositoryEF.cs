@@ -6,7 +6,7 @@ using LibrairiePoc.UsesCase.Request;
 using LibrairiePoc.UsesCase.Tools;
 using Microsoft.EntityFrameworkCore;
 
-namespace LibrairiePoc.Infra
+namespace LibrairiePoc.Infra.Ports.Secondary
 {
     public class BookRepositoryEF : IBookRepository
     {
@@ -28,7 +28,7 @@ namespace LibrairiePoc.Infra
                                                .Autor(book.Author.Label)
                                                .Category(book.Category.Label)
                                                .Build())
-                          .ToArray(),
+                                 .ToArray(),
                 Page = 1,
                 PageSize = 20
             };

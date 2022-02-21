@@ -1,4 +1,6 @@
 ﻿namespace LibrairiePoc.Infra.Tests;
+
+using LibrairiePoc.Infra.Ports.Secondary;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;

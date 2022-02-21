@@ -328,3 +328,11 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+.vs/LibrairePoc/v17/.suo
+*.dll
+*.pdb
+*.dll
+*.pdb
+LibrairiePoc.Infra.Tests/obj/Debug/net6.0/LibrairiePoc.Infra.Tests.pdb
+LibrairiePoc.Infra.Tests/obj/Debug/net6.0/ref/LibrairiePoc.Infra.Tests.dll
+LibrairiePoc.Infra.Tests/obj/Debug/net6.0/refint/LibrairiePoc.Infra.Tests.dll
