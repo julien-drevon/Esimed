@@ -10,13 +10,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibrairiePoc.UsesCase.Managers
+namespace LibrairiePoc.UsesCase.Ports.Primary
 {
     public class GettingBooksManager
     {
         public GettingBooksManager(IBookRepository bookRepo)
         {
-            this.BookRepository = bookRepo;
+            BookRepository = bookRepo;
         }
 
         private readonly IBookRepository BookRepository;

@@ -14,6 +14,7 @@ namespace LibrairiePoc.UsesCase.UsesCase
         {
             this.BooksRepository = repository;
         }
+
         public void Execute(GetBooksRequest getBooksRequest, IInPresenter<PaginedData<Book>> presenter)
         {
             var books = this.BooksRepository.GetMany(getBooksRequest);

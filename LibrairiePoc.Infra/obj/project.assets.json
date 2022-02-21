@@ -216,6 +216,16 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "LibrairiePoc.UsesCase/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/LibrairiePoc.UsesCase.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LibrairiePoc.UsesCase.dll": {}
+        }
       }
     }
   },
@@ -574,10 +584,16 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "LibrairiePoc.UsesCase/1.0.0": {
+      "type": "project",
+      "path": "../LibrairiePoc.UsesCase/LibrairiePoc.UsesCase.csproj",
+      "msbuildProject": "../LibrairiePoc.UsesCase/LibrairiePoc.UsesCase.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "LibrairiePoc.UsesCase >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.2",
       "Microsoft.EntityFrameworkCore.Relational >= 6.0.2"
     ]
@@ -617,7 +633,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\github\\wormrock\\Esimed\\LibrairiePoc.UsesCase\\LibrairiePoc.UsesCase.csproj": {
+              "projectPath": "C:\\github\\wormrock\\Esimed\\LibrairiePoc.UsesCase\\LibrairiePoc.UsesCase.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

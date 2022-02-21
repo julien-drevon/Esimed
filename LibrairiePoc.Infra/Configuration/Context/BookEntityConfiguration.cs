@@ -10,6 +10,7 @@ namespace LibrairiePoc.Infra
         {
             builder.ToTable("Book");
             builder.HasKey(book => book.Id);
+            builder.Property(book => book.Isbn);
             builder.Property(book => book.Title);
             builder.HasOne(x => x.Author)
                    .WithMany(x => x.Books)
@@ -17,6 +18,7 @@ namespace LibrairiePoc.Infra
             builder.HasOne(x => x.Category)
                    .WithMany(x => x.Books)
                    .HasForeignKey(book => book.CategoryId);
+            builder.HasIndex(x => x.Isbn).IsUnique();
         }
     }
 }

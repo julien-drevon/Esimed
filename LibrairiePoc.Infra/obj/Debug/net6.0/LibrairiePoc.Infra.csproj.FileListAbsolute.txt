@@ -10,3 +10,6 @@ C:\github\wormrock\Esimed\LibrairiePoc.Infra\obj\Debug\net6.0\LibrairiePoc.Infra
 C:\github\wormrock\Esimed\LibrairiePoc.Infra\obj\Debug\net6.0\refint\LibrairiePoc.Infra.dll
 C:\github\wormrock\Esimed\LibrairiePoc.Infra\obj\Debug\net6.0\LibrairiePoc.Infra.pdb
 C:\github\wormrock\Esimed\LibrairiePoc.Infra\obj\Debug\net6.0\ref\LibrairiePoc.Infra.dll
+C:\github\wormrock\Esimed\LibrairiePoc.Infra\bin\Debug\net6.0\LibrairiePoc.UsesCase.dll
+C:\github\wormrock\Esimed\LibrairiePoc.Infra\bin\Debug\net6.0\LibrairiePoc.UsesCase.pdb
+C:\github\wormrock\Esimed\LibrairiePoc.Infra\obj\Debug\net6.0\LibrairiePoc.Infra.csproj.CopyComplete
