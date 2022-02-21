@@ -4,18 +4,14 @@ using LibrairiePoc.UsesCase.Ports.Primary;
 using LibrairiePoc.UsesCase.Ports.Secondary;
 using LibrairiePoc.UsesCase.Request;
 using LibrairiePoc.UsesCase.Tools;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LibrairiePoc.Infra.Ports.Primary
 {
     public class GettingBookAdapter
     {
-        IPresenter<PaginedData<Book>, PaginedData<Book>> _Presenter;
-        IBookRepository _BookRepository;
+        private readonly IBookRepository _BookRepository;
+
+        private readonly IPresenter<PaginedData<Book>, PaginedData<Book>> _Presenter;
 
         public GettingBookAdapter(IPresenter<PaginedData<Book>, PaginedData<Book>> presenter, IBookRepository bookRepository)
         {
@@ -34,5 +30,4 @@ namespace LibrairiePoc.Infra.Ports.Primary
             return _Presenter.GetData();
         }
     }
-
 }

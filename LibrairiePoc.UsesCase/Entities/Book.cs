@@ -13,15 +13,15 @@ public class Book
         Category = category;
     }
 
-    public decimal Price { get; set; }
-
-    public string Isbn { get; private set; }
-
-    public string Title { get; private set; }
-
     public string Autor { get; private set; }
 
     public string Category { get; set; }
+
+    public string Isbn { get; private set; }
+
+    public decimal Price { get; set; }
+
+    public string Title { get; private set; }
 
     public bool IsValid()
     {

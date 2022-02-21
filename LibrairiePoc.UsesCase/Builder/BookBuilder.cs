@@ -14,6 +14,12 @@ public class BookBuilder
         };
     }
 
+    public BookBuilder Autor(string autor)
+    {
+        _Book.Autor = autor;
+        return this;
+    }
+
     public Book Build()
     {
         var result = new Book(_Book.Isbn, _Book.Title, _Book.Autor, _Book.Price, _Book.Category);
@@ -24,15 +30,9 @@ public class BookBuilder
         return result;
     }
 
-    public BookBuilder Title(string title)
+    public BookBuilder Category(string category)
     {
-        _Book.Title = title;
-        return this;
-    }
-
-    public BookBuilder Autor(string autor)
-    {
-        _Book.Autor = autor;
+        _Book.Category = category;
         return this;
     }
 
@@ -42,22 +42,22 @@ public class BookBuilder
         return this;
     }
 
-    public BookBuilder Category(string category)
+    public BookBuilder Title(string title)
     {
-        _Book.Category = category;
+        _Book.Title = title;
         return this;
     }
 
     private class BookForBookBuilder
     {
-        public decimal Price { get; set; }
-
-        public string Isbn { get; set; }
-
-        public string Title { get; set; }
-
         public string Autor { get; set; }
 
         public string Category { get; set; } = "";
+
+        public string Isbn { get; set; }
+
+        public decimal Price { get; set; }
+
+        public string Title { get; set; }
     }
 }
