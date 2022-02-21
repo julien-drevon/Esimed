@@ -22,15 +22,17 @@ namespace LibrairiePoc.Infra.Ports.Secondary
             var bookTable = _BookContext.Set<BookDto>();
             return new PaginedData<Book>()
             {
-                Data = bookTable.Select(book => new BookBuilder(book.Isbn)
-                                               .Title(book.Title)
-                                               .Price(book.Price)
-                                               .Autor(book.Author.Label)
-                                               .Category(book.Category.Label)
-                                               .Build())
+                Data = bookTable.Skip((getBooksRequest.PageNumber - 1) * getBooksRequest.PageSize)
+                                .Take(getBooksRequest.PageSize)
+                                .Select(book => new BookBuilder(book.Isbn)
+                                                    .Title(book.Title)
+                                                    .Price(book.Price)
+                                                    .Autor(book.Author.Label)
+                                                    .Category(book.Category.Label)
+                                                    .Build())
                                  .ToArray(),
-                Page = 1,
-                PageSize = 20
+                Page = getBooksRequest.PageNumber,
+                PageSize = getBooksRequest.PageSize
             };
         }
     }
