@@ -1,5 +1,6 @@
 ﻿namespace LibrairiePoc.Infra.Tests;
 
+using LibrairiePoc.Infra.Ports.Primary;
 using LibrairiePoc.Infra.Ports.Secondary;
 using LibrairiePoc.UsesCase.CleanArchitecture;
 using LibrairiePoc.UsesCase.Entities;
@@ -15,6 +16,7 @@ public class Startup
     {
         services.AddDbContext<DbContext, BooksContextFact>(c => c.UseInMemoryDatabase("bookContextTests"));
         services.AddTransient<IBookRepository, BookRepositoryEF>();
+        services.AddTransient<BookRepositoryEF>();
         services.AddTransient<GettingBookAdapter>(container => new GettingBookAdapter(new SimplePresenter<PaginedData<Book>>(), container.GetService<IBookRepository>()));
     }
 }

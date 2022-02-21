@@ -12,9 +12,9 @@ public class GettingBookAdapterShould
 
     GettingBookAdapter GettingBookAdapter;
 
-    public GettingBookAdapterShould( /*IBookRepository bookRepository */ GettingBookAdapter gettingBookAdapter)
+    public GettingBookAdapterShould(GettingBookAdapter gettingBookAdapter)
     {
-        this.GettingBookAdapter = gettingBookAdapter; 
+        this.GettingBookAdapter = gettingBookAdapter;
     }
 
     [Fact]
