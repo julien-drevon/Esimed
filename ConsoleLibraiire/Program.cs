@@ -18,5 +18,11 @@ services.AddTransient<BookRepositoryEF>();
 services.AddTransient<GettingBookAdapter<string>>(container => new GettingBookAdapter<string>(new ConsoleBookPResenter(), container.GetService<IBookRepository>()));
 
 var resolver = services.BuildServiceProvider();
+var getAdapter = resolver.GetService<GettingBookAdapter<string>>();
 
-Console.WriteLine(resolver.GetService<GettingBookAdapter<string>>().GetBooks(2,1));
+
+
+
+
+
+Console.WriteLine(getAdapter.GetBooks(2,1));

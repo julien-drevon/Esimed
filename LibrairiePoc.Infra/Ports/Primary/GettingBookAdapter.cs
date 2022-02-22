@@ -24,8 +24,8 @@ namespace LibrairiePoc.Infra.Ports.Primary
         {
             (new GettingBooksManager(_BookRepository, _Presenter)).ClientGetBooks(new GetBooksRequest()
             {
-                PageNumber = page,
-                PageSize = pageSize
+                PageNumber = page < 1 ? 1 : page,
+                PageSize = pageSize < 1 ? 20 : pageSize
             });
 
             return _Presenter.GetData();
