@@ -14,7 +14,6 @@ namespace LibrairiePoc.UsesCase.Tests
         [Fact]
         public void GettingBooks_Should_ClientGetBooksUseCase()
         {
-
             IPresenter<PaginedData<Book>, PaginedData<Book>> presenter = new SimplePresenter<PaginedData<Book>>();
             var manager = new GettingBooksManager(new BookRepositoryFact(), presenter);
             GetBooksRequest request = new();

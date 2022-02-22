@@ -1,3 +1,4 @@
+using LibrairiePoc.Infra;
 using LibrairiePoc.Infra.Ports.Primary;
 using LibrairiePoc.Infra.Ports.Secondary;
 using LibrairiePoc.UsesCase.CleanArchitecture;
@@ -5,7 +6,6 @@ using LibrairiePoc.UsesCase.Entities;
 using LibrairiePoc.UsesCase.Ports.Secondary;
 using LibrairiePoc.UsesCase.Tools;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using WebLibrairie;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,7 +22,6 @@ builder.Services.AddTransient<IBookRepository, BookRepositoryEF>();
 builder.Services.AddTransient<BookRepositoryEF>();
 builder.Services.AddTransient<GettingBookAdapter<PaginedData<Book>>>(container => new GettingBookAdapter<PaginedData<Book>>(new SimplePresenter<PaginedData<Book>>(), container.GetService<IBookRepository>()));
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -37,6 +36,5 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
 
 app.Run();

@@ -5,9 +5,7 @@ using LibrairiePoc.UsesCase.Builder;
 using LibrairiePoc.UsesCase.Entities;
 using Xunit;
 
-//ref/isbn , titre , auteur, prix, categorie
-
-public class BookFactoryShould
+public class BookBuilderShould
 {
     [Fact]
     public void InvalidBook_ShouldNotBeBuild_AndThrowAnException()

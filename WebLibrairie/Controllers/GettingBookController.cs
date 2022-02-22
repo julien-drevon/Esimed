@@ -10,7 +10,7 @@ namespace WebLibrairie.Controllers
     [Route("[controller]")]
     public class GettingBookController : ControllerBase
     {
-        GettingBookAdapter<PaginedData<Book>> _BookAdapter;
+        private GettingBookAdapter<PaginedData<Book>> _BookAdapter;
 
         public GettingBookController(GettingBookAdapter<PaginedData<Book>> bookAdapter)
         {
@@ -28,5 +28,4 @@ namespace WebLibrairie.Controllers
             return Ok(_BookAdapter.GetBooks(pageNumber, pageSize));
         }
     }
-
 }

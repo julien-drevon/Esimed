@@ -9,9 +9,9 @@ namespace LibrairiePoc.UsesCase.Ports.Primary
 {
     public class GettingBooksManager
     {
-        private readonly IBookRepository _BookRepository;
-
         private readonly IInPresenter<PaginedData<Book>> _BookPresenter;
+
+        private readonly IBookRepository _BookRepository;
 
         public GettingBooksManager(IBookRepository bookRepo, IInPresenter<PaginedData<Book>> bookPresenter)
         {

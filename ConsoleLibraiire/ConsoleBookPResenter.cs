@@ -1,15 +1,9 @@
 ﻿using LibrairiePoc.UsesCase.CleanArchitecture;
 using LibrairiePoc.UsesCase.Entities;
 using LibrairiePoc.UsesCase.Tools;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleLibraiire
 {
-
     public class ConsoleBookPResenter : IPresenter<PaginedData<Book>, string>
     {
         private PaginedData<Book> _Data;
@@ -24,5 +18,4 @@ namespace ConsoleLibraiire
             this._Data = data;
         }
     }
-
 }

@@ -9,8 +9,7 @@ using Xunit;
 
 public class GettingBookAdapterShould
 {
-
-    GettingBookAdapter<PaginedData<Book>> GettingBookAdapter;
+    private GettingBookAdapter<PaginedData<Book>> GettingBookAdapter;
 
     public GettingBookAdapterShould(GettingBookAdapter<PaginedData<Book>> gettingBookAdapter)
     {
@@ -86,7 +85,7 @@ public class GettingBookAdapterShould
                         .Autor("Isaac Asimov")
                         .Category("SF")
                         .Price(6m)
-                        .Build()                  
+                        .Build()
                 }
             });
     }

@@ -14,7 +14,7 @@ namespace LibrairiePoc.Infra.Ports.Secondary
 
         public BookRepositoryEF(DbContext bookContext)
         {
-            _BookContext = bookContext;            
+            _BookContext = bookContext;
         }
 
         public PaginedData<Book> GetMany(GetBooksRequest getBooksRequest)
