@@ -10,7 +10,7 @@ namespace LibrairiePoc.Infra.Ports.Secondary
 {
     public class BookRepositoryEF : IBookRepository
     {
-        public DbContext _BookContext;
+        private readonly DbContext _BookContext;
 
         public BookRepositoryEF(DbContext bookContext)
         {
