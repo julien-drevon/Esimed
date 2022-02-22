@@ -10,9 +10,9 @@ using Xunit;
 public class GettingBookAdapterShould
 {
 
-    GettingBookAdapter GettingBookAdapter;
+    GettingBookAdapter<PaginedData<Book>> GettingBookAdapter;
 
-    public GettingBookAdapterShould(GettingBookAdapter gettingBookAdapter)
+    public GettingBookAdapterShould(GettingBookAdapter<PaginedData<Book>> gettingBookAdapter)
     {
         this.GettingBookAdapter = gettingBookAdapter;
     }
@@ -43,4 +43,6 @@ public class GettingBookAdapterShould
                 }
             });
     }
+
+    //public void GivenUser_ThenIAskPage0
 }

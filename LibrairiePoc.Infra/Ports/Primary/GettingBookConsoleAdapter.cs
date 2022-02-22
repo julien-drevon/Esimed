@@ -7,19 +7,20 @@ using LibrairiePoc.UsesCase.Tools;
 
 namespace LibrairiePoc.Infra.Ports.Primary
 {
-    public class GettingBookAdapter
+    public class GettingBookAdapter<Tout>
+
     {
         private readonly IBookRepository _BookRepository;
 
-        private readonly IPresenter<PaginedData<Book>, PaginedData<Book>> _Presenter;
+        private readonly IPresenter<PaginedData<Book>, Tout> _Presenter;
 
-        public GettingBookAdapter(IPresenter<PaginedData<Book>, PaginedData<Book>> presenter, IBookRepository bookRepository)
+        public GettingBookAdapter(IPresenter<PaginedData<Book>, Tout> presenter, IBookRepository bookRepository)
         {
             this._Presenter = presenter;
             this._BookRepository = bookRepository;
         }
 
-        public PaginedData<Book> GetBooks(int page, int pageSize)
+        public Tout GetBooks(int page, int pageSize)
         {
             (new GettingBooksManager(_BookRepository, _Presenter)).ClientGetBooks(new GetBooksRequest()
             {
