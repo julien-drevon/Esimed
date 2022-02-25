@@ -400,3 +400,7 @@ FodyWeavers.xsd
 *.pdb
 .vs/LibrairePoc/DesignTimeBuild/.dtbcache.v2
 .vs/LibrairePoc/v17/.suo
+*.dll
+*.cache
+*.dll
+*.cache
