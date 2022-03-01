@@ -37,6 +37,15 @@ namespace LibrairiePoc2.WebService.Tests
             });
         }
 
+        [Fact]
+        public void AddABookInCatalogue()
+        {
+            var book = new Book("testToAdd", "titreToAdd");
+            var bookCatalogue = new BookCatalogueEF(this.DbContext, this.Converter);
+            bookCatalogue.AddBook(book);
+            DbContext.Set<BookDTO>().Single(x => x.Isbn == "testToAdd").Should().BeEquivalentTo(book);
+        }
+
     }
 
    
