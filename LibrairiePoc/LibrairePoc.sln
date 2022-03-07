@@ -13,11 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibrairiePoc.Infra.Tests", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibrairiePoc.Infra", "LibrairiePoc.Infra\LibrairiePoc.Infra.csproj", "{4BDBE2FF-69C4-4D23-9622-A8683A8D8FFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebLibrairie", "WebLibrairie\WebLibrairie.csproj", "{FB6412CC-744E-4AB4-A0BD-260C92945253}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebLibrairie", "WebLibrairie\WebLibrairie.csproj", "{FB6412CC-744E-4AB4-A0BD-260C92945253}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleLibraiire", "ConsoleLibraiire\ConsoleLibraiire.csproj", "{E5AC0C92-094C-4885-981E-2ACA667751C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleLibraiire", "ConsoleLibraiire\ConsoleLibraiire.csproj", "{E5AC0C92-094C-4885-981E-2ACA667751C3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applicatif", "Applicatif", "{92E39560-8013-494E-9410-E0AFE59E9E8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibrariePoc.Wpf", "LibrariePoc.Wpf\LibrariePoc.Wpf.csproj", "{40C51808-6EA0-4881-934C-781A47BDDF29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{E5AC0C92-094C-4885-981E-2ACA667751C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5AC0C92-094C-4885-981E-2ACA667751C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5AC0C92-094C-4885-981E-2ACA667751C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40C51808-6EA0-4881-934C-781A47BDDF29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40C51808-6EA0-4881-934C-781A47BDDF29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40C51808-6EA0-4881-934C-781A47BDDF29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40C51808-6EA0-4881-934C-781A47BDDF29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +64,7 @@ Global
 		{8C8AF1B7-7BF8-4066-8E5B-FA2AF46EA279} = {55E7B569-2C6D-4D89-864E-F9A4B571E266}
 		{FB6412CC-744E-4AB4-A0BD-260C92945253} = {92E39560-8013-494E-9410-E0AFE59E9E8B}
 		{E5AC0C92-094C-4885-981E-2ACA667751C3} = {92E39560-8013-494E-9410-E0AFE59E9E8B}
+		{40C51808-6EA0-4881-934C-781A47BDDF29} = {92E39560-8013-494E-9410-E0AFE59E9E8B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5B37DEAF-470E-4303-94F8-07A061D90FB7}
