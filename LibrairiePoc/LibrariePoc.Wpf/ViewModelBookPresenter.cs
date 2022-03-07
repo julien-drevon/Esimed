@@ -10,17 +10,17 @@ namespace LibrariePoc.Wpf
     {
         private PaginedData<Book> _Data;
 
-        public void Present(PaginedData<Book> data)
-        {
-            this._Data = data;
-        }
-
-        MainWindowViewModel IOutPresenter<MainWindowViewModel>.GetData()
+        public MainWindowViewModel GetData()
         {
             return new MainWindowViewModel()
             {
                 Books = new ObservableCollection<BookViewModel>(_Data.Data.Select(x => new BookViewModel() { Author = x.Autor, Title = x.Title }))
             };
+        }
+
+        public void Present(PaginedData<Book> data)
+        {
+            this._Data = data;
         }
     }
 }
