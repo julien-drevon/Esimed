@@ -18,32 +18,3 @@ var resolver = services.BuildServiceProvider();
 var getAdapter = resolver.GetService<GettingBookAdapter<string>>();
 
 Console.WriteLine(getAdapter.GetBooks(2, 1));
-
-//public interface ILanceDeProvider
-//{
-//    (int De1, int De2, int De3) LancerDe();
-//}
-
-
-//public class LanceDeFact : ILanceDeProvider
-//{
-//    (int De1, int De2, int De3) _Val;
-//    public LanceDeFact(int val1, int val2, int val3)
-//    {
-//        this._Val = new(val1, val2, val3);
-//    }
-
-//    public (int De1, int De2, int De3) LancerDe()
-//    {
-//        return this._Val;
-//    }
-//}
-
-//public class LanceDe421 : ILanceDeProvider
-//{
-//    public (int De1, int De2, int De3) LancerDe()
-//    {
-//        return new(4, 2, 1);
-//    }
-//}
-
