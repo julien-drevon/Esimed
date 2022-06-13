@@ -1,11 +1,11 @@
 ﻿using LibrairiePoc.UsesCase.Entities;
-using LibrairiePoc.UsesCase.Ports.Gateway;
+using LibrairiePoc.UsesCase.Ports.Storages;
 using LibrairiePoc.UsesCase.Request;
 using LibrairiePoc.UsesCase.Tools;
 
 namespace LibrairiePoc.UsesCase.Tests.UsesCase
 {
-    public class BookRepositoryFact : IBookGateway
+    public class BookRepositoryFact : IBookStorage
     {
         public PaginedData<Book> GetMany(GetBooksRequest getBooksRequest)
         {

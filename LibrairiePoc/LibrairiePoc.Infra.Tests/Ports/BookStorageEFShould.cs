@@ -4,7 +4,7 @@ using FluentAssertions;
 using LibrairiePoc.Infra.Ports.Controller;
 using LibrairiePoc.UsesCase.Builder;
 using LibrairiePoc.UsesCase.Entities;
-using LibrairiePoc.UsesCase.Ports.Gateway;
+using LibrairiePoc.UsesCase.Ports.Storages;
 using LibrairiePoc.UsesCase.Request;
 using LibrairiePoc.UsesCase.Tools;
 using Microsoft.EntityFrameworkCore;
@@ -13,7 +13,7 @@ using Xunit;
 
 public class BookStorageEFShould
 {
-    public IBookGateway bookRepository;
+    public IBookStorage bookRepository;
 
     public DbContext Context { get; }
 

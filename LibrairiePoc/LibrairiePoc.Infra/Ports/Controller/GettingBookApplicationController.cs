@@ -1,7 +1,7 @@
 ﻿using LibrairiePoc.UsesCase.CleanArchitecture;
 using LibrairiePoc.UsesCase.Entities;
-using LibrairiePoc.UsesCase.Ports.Controller;
-using LibrairiePoc.UsesCase.Ports.Gateway;
+using LibrairiePoc.UsesCase.Ports.UseCaseInteractors;
+using LibrairiePoc.UsesCase.Ports.Storages;
 using LibrairiePoc.UsesCase.Request;
 using LibrairiePoc.UsesCase.Tools;
 using LibrairiePoc.UsesCase.UsesCase;
@@ -11,11 +11,11 @@ namespace LibrairiePoc.Infra.Ports.Controller
     public class GettingBookApplicationController<Tout>
 
     {
-        private readonly IBookGateway _BookGateway;
+        private readonly IBookStorage _BookGateway;
 
         private readonly IPresenter<PaginedData<Book>, Tout> _Presenter;
 
-        public GettingBookApplicationController(IPresenter<PaginedData<Book>, Tout> presenter, IBookGateway bookRepository)
+        public GettingBookApplicationController(IPresenter<PaginedData<Book>, Tout> presenter, IBookStorage bookRepository)
         {
             this._Presenter = presenter;
             this._BookGateway = bookRepository;

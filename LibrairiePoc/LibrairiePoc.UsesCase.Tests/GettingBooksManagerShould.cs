@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using LibrairiePoc.UsesCase.CleanArchitecture;
 using LibrairiePoc.UsesCase.Entities;
-using LibrairiePoc.UsesCase.Ports.Controller;
+using LibrairiePoc.UsesCase.Ports.UseCaseInteractors;
 using LibrairiePoc.UsesCase.Request;
 using LibrairiePoc.UsesCase.Tests.UsesCase;
 using LibrairiePoc.UsesCase.Tools;

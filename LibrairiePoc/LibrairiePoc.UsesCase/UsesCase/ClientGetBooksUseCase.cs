@@ -1,6 +1,6 @@
 ﻿using LibrairiePoc.UsesCase.CleanArchitecture;
 using LibrairiePoc.UsesCase.Entities;
-using LibrairiePoc.UsesCase.Ports.Gateway;
+using LibrairiePoc.UsesCase.Ports.Storages;
 using LibrairiePoc.UsesCase.Request;
 using LibrairiePoc.UsesCase.Tools;
 
@@ -8,9 +8,9 @@ namespace LibrairiePoc.UsesCase.UsesCase
 {
     public class ClientGetBooksUseCase
     {
-        private readonly IBookGateway BookGateway;
+        private readonly IBookStorage BookGateway;
 
-        public ClientGetBooksUseCase(IBookGateway repository)
+        public ClientGetBooksUseCase(IBookStorage repository)
         {
             this.BookGateway = repository;
         }

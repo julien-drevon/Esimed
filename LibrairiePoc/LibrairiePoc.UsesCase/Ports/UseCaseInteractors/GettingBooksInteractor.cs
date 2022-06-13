@@ -1,19 +1,19 @@
 ﻿using LibrairiePoc.UsesCase.CleanArchitecture;
 using LibrairiePoc.UsesCase.Entities;
-using LibrairiePoc.UsesCase.Ports.Gateway;
+using LibrairiePoc.UsesCase.Ports.Storages;
 using LibrairiePoc.UsesCase.Request;
 using LibrairiePoc.UsesCase.Tools;
 using LibrairiePoc.UsesCase.UsesCase;
 
-namespace LibrairiePoc.UsesCase.Ports.Controller
+namespace LibrairiePoc.UsesCase.Ports.UseCaseInteractors
 {
     public class GettingBooksController
     {
         private readonly IInPresenter<PaginedData<Book>> _BookPresenter;
 
-        private readonly IBookGateway _BookRepository;
+        private readonly IBookStorage _BookRepository;
 
-        public GettingBooksController(IBookGateway bookRepo, IInPresenter<PaginedData<Book>> bookPresenter)
+        public GettingBooksController(IBookStorage bookRepo, IInPresenter<PaginedData<Book>> bookPresenter)
         {
             _BookRepository = bookRepo;
             _BookPresenter = bookPresenter;
