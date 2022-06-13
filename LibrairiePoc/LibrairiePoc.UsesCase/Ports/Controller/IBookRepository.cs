@@ -2,9 +2,9 @@
 using LibrairiePoc.UsesCase.Request;
 using LibrairiePoc.UsesCase.Tools;
 
-namespace LibrairiePoc.UsesCase.Ports.Secondary
+namespace LibrairiePoc.UsesCase.Ports.Controller
 {
-    public interface IBookRepository
+    public interface IBookStorage
     {
          PaginedData<Book> GetMany(GetBooksRequest getBooksRequest);
     }

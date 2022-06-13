@@ -1,7 +1,7 @@
 ﻿using LibrairiePoc.Infra;
-using LibrairiePoc.Infra.Ports.Primary;
-using LibrairiePoc.Infra.Ports.Secondary;
-using LibrairiePoc.UsesCase.Ports.Secondary;
+using LibrairiePoc.Infra.Ports.Gateway;
+using LibrairiePoc.Infra.Ports.Controller;
+using LibrairiePoc.UsesCase.Ports.Controller;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -25,11 +25,11 @@ namespace LibrariePoc.Wpf
         {
             var services = new ServiceCollection();
             services.AddDbContext<DbContext, BooksContext>(c => c.UseInMemoryDatabase("bookContextTests"));
-            services.AddTransient<IBookRepository, BookRepositoryEF>();
+            services.AddTransient<IBookStorage, BookRepositoryEF>();
             services.AddTransient<BookRepositoryEF>();
-            services.AddTransient<GettingBookAdapter<MainWindowViewModel>>(container => new GettingBookAdapter<MainWindowViewModel>(new ViewModelBookPResenter(), container.GetService<IBookRepository>()));
+            services.AddTransient<GettingBookGateway<MainWindowViewModel>>(container => new GettingBookGateway<MainWindowViewModel>(new ViewModelBookPResenter(), container.GetService<IBookStorage>()));
             services.AddSingleton<MainWindow>();
-            services.AddSingleton<MainWindowViewModel>(c => c.GetRequiredService<GettingBookAdapter<MainWindowViewModel>>().GetBooks(1, 10));
+            services.AddSingleton<MainWindowViewModel>(c => c.GetRequiredService<GettingBookGateway<MainWindowViewModel>>().GetBooks(1, 10));
             serviceProvider = services.BuildServiceProvider();
         }
 

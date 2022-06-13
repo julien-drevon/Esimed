@@ -1,4 +1,4 @@
-using LibrairiePoc.Infra.Ports.Primary;
+using LibrairiePoc.Infra.Ports.Gateway;
 using LibrairiePoc.UsesCase.Entities;
 using LibrairiePoc.UsesCase.Tools;
 using Microsoft.AspNetCore.Mvc;
@@ -10,9 +10,9 @@ namespace WebLibrairie.Controllers
     [Route("[controller]")]
     public class GettingBookController : ControllerBase
     {
-        private GettingBookAdapter<PaginedData<Book>> _BookAdapter;
+        private GettingBookGateway<PaginedData<Book>> _BookAdapter;
 
-        public GettingBookController(GettingBookAdapter<PaginedData<Book>> bookAdapter)
+        public GettingBookController(GettingBookGateway<PaginedData<Book>> bookAdapter)
         {
             _BookAdapter = bookAdapter;
         }
@@ -23,16 +23,5 @@ namespace WebLibrairie.Controllers
         {
             return _BookAdapter.GetBooks(pageNumber, pageSize);
         }
-
-        //[HttpGet]
-        //[Route("get")]
-        //[Produces(MediaTypeNames.Application.Json)]
-        //[ProducesResponseType(statusCode: StatusCodes.Status200OK, Type = typeof(PaginedData<Book>))]
-        //[ProducesResponseType(statusCode: StatusCodes.Status400BadRequest, Type = typeof(string))]
-        //[ProducesResponseType(statusCode: StatusCodes.Status500InternalServerError)]
-        //public PaginedData<Book> GetBooks(int pageNumber, int pageSize)
-        //{
-        //    return _BookAdapter.GetBooks(pageNumber, pageSize);
-        //}
     }
 }

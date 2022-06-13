@@ -1,23 +1,23 @@
 namespace LibrairiePoc.Infra.Tests;
 
 using FluentAssertions;
-using LibrairiePoc.Infra.Ports.Secondary;
+using LibrairiePoc.Infra.Ports.Controller;
 using LibrairiePoc.UsesCase.Builder;
 using LibrairiePoc.UsesCase.Entities;
-using LibrairiePoc.UsesCase.Ports.Secondary;
+using LibrairiePoc.UsesCase.Ports.Controller;
 using LibrairiePoc.UsesCase.Request;
 using LibrairiePoc.UsesCase.Tools;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using Xunit;
 
-public class BookRepositoryEFShould
+public class BookStorageEFShould
 {
-    public IBookRepository bookRepository;
+    public IBookStorage bookRepository;
 
     public DbContext Context { get; }
 
-    public BookRepositoryEFShould(BookRepositoryEF bookEf, DbContext context)
+    public BookStorageEFShould(BookRepositoryEF bookEf, DbContext context)
     {
         this.bookRepository = bookEf;
         this.Context = context;

@@ -1,9 +1,9 @@
 using LibrairiePoc.Infra;
-using LibrairiePoc.Infra.Ports.Primary;
-using LibrairiePoc.Infra.Ports.Secondary;
+using LibrairiePoc.Infra.Ports.Gateway;
+using LibrairiePoc.Infra.Ports.Controller;
 using LibrairiePoc.UsesCase.CleanArchitecture;
 using LibrairiePoc.UsesCase.Entities;
-using LibrairiePoc.UsesCase.Ports.Secondary;
+using LibrairiePoc.UsesCase.Ports.Controller;
 using LibrairiePoc.UsesCase.Tools;
 using Microsoft.EntityFrameworkCore;
 using WebLibrairie;
@@ -18,9 +18,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<DbContext, BooksContext>(c => c.UseInMemoryDatabase("bookContextTests"));
-builder.Services.AddTransient<IBookRepository, BookRepositoryEF>();
+builder.Services.AddTransient<IBookStorage, BookRepositoryEF>();
 builder.Services.AddTransient<BookRepositoryEF>();
-builder.Services.AddTransient<GettingBookAdapter<PaginedData<Book>>>(container => new GettingBookAdapter<PaginedData<Book>>(new SimplePresenter<PaginedData<Book>>(), container.GetService<IBookRepository>()));
+builder.Services.AddTransient<GettingBookGateway<PaginedData<Book>>>(container => new GettingBookGateway<PaginedData<Book>>(new SimplePresenter<PaginedData<Book>>(), container.GetService<IBookStorage>()));
 
 var app = builder.Build();
 

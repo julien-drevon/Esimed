@@ -1,6 +1,6 @@
 ﻿using LibrairiePoc.UsesCase.CleanArchitecture;
 using LibrairiePoc.UsesCase.Entities;
-using LibrairiePoc.UsesCase.Ports.Secondary;
+using LibrairiePoc.UsesCase.Ports.Controller;
 using LibrairiePoc.UsesCase.Request;
 using LibrairiePoc.UsesCase.Tools;
 
@@ -8,16 +8,16 @@ namespace LibrairiePoc.UsesCase.UsesCase
 {
     public class ClientGetBooksUseCase
     {
-        private readonly IBookRepository BooksRepository;
+        private readonly IBookStorage BookController;
 
-        public ClientGetBooksUseCase(IBookRepository repository)
+        public ClientGetBooksUseCase(IBookStorage repository)
         {
-            this.BooksRepository = repository;
+            this.BookController = repository;
         }
 
         public void Execute(GetBooksRequest getBooksRequest, IInPresenter<PaginedData<Book>> presenter)
         {
-            var books = this.BooksRepository.GetMany(getBooksRequest);
+            var books = this.BookController.GetMany(getBooksRequest);
             presenter.Present(books);
         }
     }

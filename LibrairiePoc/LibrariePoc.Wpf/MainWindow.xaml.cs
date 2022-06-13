@@ -1,5 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using LibrairiePoc.Infra.Ports.Primary;
+using LibrairiePoc.Infra.Ports.Gateway;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
