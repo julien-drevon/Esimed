@@ -6,6 +6,6 @@ namespace LibrairiePoc.UsesCase.Ports.Secondary
 {
     public interface IBookRepository
     {
-        PaginedData<Book> GetMany(GetBooksRequest getBooksRequest);
+         PaginedData<Book> GetMany(GetBooksRequest getBooksRequest);
     }
 }

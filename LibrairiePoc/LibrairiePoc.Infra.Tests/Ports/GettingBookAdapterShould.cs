@@ -90,4 +90,18 @@ public class GettingBookAdapterShould
                 }
             });
     }
+
+
+    [Fact]
+    public void GivenUser_ThenIGettingBooksForPAge5_WhenShouldReturnEmptyBooks()
+    {
+        var assert = GettingBookAdapter.GetBooks(5, 20);
+        assert.Should().BeEquivalentTo(
+            new PaginedData<Book>()
+            {
+                Page = 5,
+                PageSize = 20,
+                Data = new Book[0],
+            });
+    }
 }

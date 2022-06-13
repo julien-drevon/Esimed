@@ -15,8 +15,8 @@ public class Startup
     public void ConfigureServices(IServiceCollection services, HostBuilderContext hostBuilderContext)
     {
         services.AddDbContext<DbContext, BooksContextFact>(c => c.UseInMemoryDatabase("bookContextTests"));
-        services.AddTransient<IBookRepository, BookRepositoryEF>();
         services.AddTransient<BookRepositoryEF>();
+        services.AddTransient<IBookRepository, BookRepositoryEF>();
         services.AddTransient<GettingBookAdapter<PaginedData<Book>>>(container => new GettingBookAdapter<PaginedData<Book>>(new SimplePresenter<PaginedData<Book>>(), container.GetService<IBookRepository>()));
     }
 }

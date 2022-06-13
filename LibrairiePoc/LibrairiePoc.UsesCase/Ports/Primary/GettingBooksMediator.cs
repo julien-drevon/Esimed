@@ -7,13 +7,13 @@ using LibrairiePoc.UsesCase.UsesCase;
 
 namespace LibrairiePoc.UsesCase.Ports.Primary
 {
-    public class GettingBooksManager
+    public class GettingBooksMediator
     {
         private readonly IInPresenter<PaginedData<Book>> _BookPresenter;
 
         private readonly IBookRepository _BookRepository;
 
-        public GettingBooksManager(IBookRepository bookRepo, IInPresenter<PaginedData<Book>> bookPresenter)
+        public GettingBooksMediator(IBookRepository bookRepo, IInPresenter<PaginedData<Book>> bookPresenter)
         {
             _BookRepository = bookRepo;
             _BookPresenter = bookPresenter;

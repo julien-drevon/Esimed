@@ -8,11 +8,8 @@ using LibrairiePoc.UsesCase.Ports.Secondary;
 using LibrairiePoc.UsesCase.Request;
 using LibrairiePoc.UsesCase.Tools;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using Xunit;
-public interface IAuthentProvider
-{
-    public void CreateUser(string mail, string pw);
-}
 
 public class BookRepositoryEFShould
 {
@@ -73,6 +70,19 @@ public class BookRepositoryEFShould
                         .Price(6m)
                         .Build()
                 }
+            });
+    }
+
+    [Fact]
+    public void BookRepository_GetMany_WithPageSizeAt5AndPageNumberAt2_ShouldReturnCorectPagination()
+    {
+        var assert = bookRepository.GetMany(new GetBooksRequest() { PageSize = 3, PageNumber = 5 });
+        assert.Should().BeEquivalentTo(
+            new PaginedData<Book>()
+            {
+                Page = 5,
+                PageSize = 3,
+                Data = new Book[0],
             });
     }
 }

@@ -21,17 +21,6 @@ namespace LibrairiePoc.Infra.Ports.Primary
             this._BookRepository = bookRepository;
         }
 
-        //public Tout GetBooks(int page, int pageSize)
-        //{
-        //    (new GettingBooksManager(_BookRepository, _Presenter)).ClientGetBooks(new GetBooksRequest()
-        //    {
-        //        PageNumber = page < 1 ? 1 : page,
-        //        PageSize = pageSize < 1 ? 20 : pageSize
-        //    });
-
-        //    return _Presenter.GetData();
-        //}
-
         public Tout GetBooks(int page, int pageSize)
         {
             var getBooksRequest = new GetBooksRequest()
