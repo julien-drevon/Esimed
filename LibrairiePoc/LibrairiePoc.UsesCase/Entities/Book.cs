@@ -29,4 +29,6 @@ public class Book
                 && Title.IsNullOrEmpty() is false
                 && Autor.IsNullOrEmpty() is false;
     }
+
+
 }

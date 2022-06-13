@@ -17,4 +17,4 @@ services.AddTransient<GettingBookApplicationController<string>>(container => new
 var resolver = services.BuildServiceProvider();
 var getAdapter = resolver.GetService<GettingBookApplicationController<string>>();
 
-Console.WriteLine(getAdapter.GetBooks(2, 1));
+Console.WriteLine(getAdapter.GetBooks(1, 2));

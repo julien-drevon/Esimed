@@ -7,13 +7,13 @@ using LibrairiePoc.UsesCase.UsesCase;
 
 namespace LibrairiePoc.UsesCase.Ports.UseCaseInteractors
 {
-    public class GettingBooksController
+    public class GettingBooksInteractor
     {
         private readonly IInPresenter<PaginedData<Book>> _BookPresenter;
 
         private readonly IBookStorage _BookRepository;
 
-        public GettingBooksController(IBookStorage bookRepo, IInPresenter<PaginedData<Book>> bookPresenter)
+        public GettingBooksInteractor(IBookStorage bookRepo, IInPresenter<PaginedData<Book>> bookPresenter)
         {
             _BookRepository = bookRepo;
             _BookPresenter = bookPresenter;

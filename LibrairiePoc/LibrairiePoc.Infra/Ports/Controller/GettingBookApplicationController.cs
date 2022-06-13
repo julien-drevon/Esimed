@@ -12,7 +12,6 @@ namespace LibrairiePoc.Infra.Ports.Controller
 
     {
         private readonly IBookStorage _BookGateway;
-
         private readonly IPresenter<PaginedData<Book>, Tout> _Presenter;
 
         public GettingBookApplicationController(IPresenter<PaginedData<Book>, Tout> presenter, IBookStorage bookRepository)
@@ -29,9 +28,7 @@ namespace LibrairiePoc.Infra.Ports.Controller
                 PageSize = pageSize < 1 ? 20 : pageSize
             };
 
-            var usecase = new ClientGetBooksUseCase(_BookGateway);
-            usecase.Execute(getBooksRequest, _Presenter);
-
+            (new GettingBooksInteractor(_BookGateway, _Presenter)).ClientGetBooks(getBooksRequest);
             return _Presenter.GetData();
         }
     }

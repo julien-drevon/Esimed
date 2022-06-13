@@ -22,8 +22,7 @@ namespace LibrairiePoc.Infra.Ports.Controller
             var bookTable = _BookContext.Set<BookDto>();
             return new PaginedData<Book>()
             {
-                Data = bookTable
-                                .Select(book => new BookBuilder(book.Isbn)
+                Data = bookTable.Select(book => new BookBuilder(book.Isbn)
                                                     .Title(book.Title)
                                                     .Price(book.Price)
                                                     .Autor(book.Author.Label)
@@ -31,7 +30,7 @@ namespace LibrairiePoc.Infra.Ports.Controller
                                                     .Build())
                                 .Skip((getBooksRequest.PageNumber - 1) * getBooksRequest.PageSize)
                                 .Take(getBooksRequest.PageSize)
-                                 .ToArray(),
+                                .ToArray(),
                 Page = getBooksRequest.PageNumber,
                 PageSize = getBooksRequest.PageSize
             };
