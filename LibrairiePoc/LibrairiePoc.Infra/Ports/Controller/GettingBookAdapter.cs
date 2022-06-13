@@ -1,24 +1,24 @@
 ﻿using LibrairiePoc.UsesCase.CleanArchitecture;
 using LibrairiePoc.UsesCase.Entities;
-using LibrairiePoc.UsesCase.Ports.Gateway;
 using LibrairiePoc.UsesCase.Ports.Controller;
+using LibrairiePoc.UsesCase.Ports.Gateway;
 using LibrairiePoc.UsesCase.Request;
 using LibrairiePoc.UsesCase.Tools;
 using LibrairiePoc.UsesCase.UsesCase;
 
-namespace LibrairiePoc.Infra.Ports.Gateway
+namespace LibrairiePoc.Infra.Ports.Controller
 {
-    public class GettingBookGateway<Tout>
+    public class GettingBookApplicationController<Tout>
 
     {
-        private readonly IBookStorage _BookRepository;
+        private readonly IBookGateway _BookGateway;
 
         private readonly IPresenter<PaginedData<Book>, Tout> _Presenter;
 
-        public GettingBookGateway(IPresenter<PaginedData<Book>, Tout> presenter, IBookStorage bookRepository)
+        public GettingBookApplicationController(IPresenter<PaginedData<Book>, Tout> presenter, IBookGateway bookRepository)
         {
             this._Presenter = presenter;
-            this._BookRepository = bookRepository;
+            this._BookGateway = bookRepository;
         }
 
         public Tout GetBooks(int page, int pageSize)
@@ -29,7 +29,7 @@ namespace LibrairiePoc.Infra.Ports.Gateway
                 PageSize = pageSize < 1 ? 20 : pageSize
             };
 
-            var usecase = new ClientGetBooksUseCase(_BookRepository);
+            var usecase = new ClientGetBooksUseCase(_BookGateway);
             usecase.Execute(getBooksRequest, _Presenter);
 
             return _Presenter.GetData();

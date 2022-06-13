@@ -1,4 +1,4 @@
-using LibrairiePoc.Infra.Ports.Gateway;
+using LibrairiePoc.Infra.Ports.Controller;
 using LibrairiePoc.UsesCase.Entities;
 using LibrairiePoc.UsesCase.Tools;
 using Microsoft.AspNetCore.Mvc;
@@ -10,9 +10,9 @@ namespace WebLibrairie.Controllers
     [Route("[controller]")]
     public class GettingBookController : ControllerBase
     {
-        private GettingBookGateway<PaginedData<Book>> _BookAdapter;
+        private GettingBookApplicationController<PaginedData<Book>> _BookAdapter;
 
-        public GettingBookController(GettingBookGateway<PaginedData<Book>> bookAdapter)
+        public GettingBookController(GettingBookApplicationController<PaginedData<Book>> bookAdapter)
         {
             _BookAdapter = bookAdapter;
         }

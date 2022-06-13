@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using LibrairiePoc.UsesCase.CleanArchitecture;
 using LibrairiePoc.UsesCase.Entities;
-using LibrairiePoc.UsesCase.Ports.Gateway;
+using LibrairiePoc.UsesCase.Ports.Controller;
 using LibrairiePoc.UsesCase.Request;
 using LibrairiePoc.UsesCase.Tests.UsesCase;
 using LibrairiePoc.UsesCase.Tools;
@@ -15,7 +15,7 @@ namespace LibrairiePoc.UsesCase.Tests
         public void GettingBooks_Should_ClientGetBooksUseCase()
         {
             IPresenter<PaginedData<Book>, PaginedData<Book>> presenter = new SimplePresenter<PaginedData<Book>>();
-            var manager = new GettingBooksMediator(new BookRepositoryFact(), presenter);
+            var manager = new GettingBooksController(new BookRepositoryFact(), presenter);
             GetBooksRequest request = new();
             manager.ClientGetBooks(request);
             presenter.GetData().Should().BeEquivalentTo(new PaginedData<Book>()

@@ -1,14 +1,14 @@
 ﻿using LibrairiePoc.Infra.Dtos;
 using LibrairiePoc.UsesCase.Builder;
 using LibrairiePoc.UsesCase.Entities;
-using LibrairiePoc.UsesCase.Ports.Controller;
+using LibrairiePoc.UsesCase.Ports.Gateway;
 using LibrairiePoc.UsesCase.Request;
 using LibrairiePoc.UsesCase.Tools;
 using Microsoft.EntityFrameworkCore;
 
 namespace LibrairiePoc.Infra.Ports.Controller
 {
-    public class BookRepositoryEF : IBookStorage
+    public class BookRepositoryEF : IBookGateway
     {
         private readonly DbContext _BookContext;
 

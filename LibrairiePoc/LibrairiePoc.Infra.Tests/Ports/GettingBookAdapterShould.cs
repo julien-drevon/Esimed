@@ -1,18 +1,18 @@
 ﻿namespace LibrairiePoc.Infra.Tests;
 
 using FluentAssertions;
-using LibrairiePoc.Infra.Ports.Gateway;
+using LibrairiePoc.Infra.Ports.Controller;
 using LibrairiePoc.UsesCase.Builder;
 using LibrairiePoc.UsesCase.Entities;
 using LibrairiePoc.UsesCase.Tools;
 using Xunit;
 
 
-public class GettingBookGatewayShould
+public class GettingBookControllerShould
 {
-    private readonly GettingBookGateway<PaginedData<Book>> GettingBookAdapter;
+    private readonly GettingBookApplicationController<PaginedData<Book>> GettingBookAdapter;
 
-    public GettingBookGatewayShould(GettingBookGateway<PaginedData<Book>> gettingBookAdapter)
+    public GettingBookControllerShould(GettingBookApplicationController<PaginedData<Book>> gettingBookAdapter)
     {
         this.GettingBookAdapter = gettingBookAdapter;
     }
